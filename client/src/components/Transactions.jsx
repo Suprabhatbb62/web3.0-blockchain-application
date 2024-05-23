@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
 
 import { TransactionContext } from "../context/TransactionContext";
-
+// https://api-sepolia.etherscan.io/api?module=account&action=txlist&address=0xe648e6238d8f0F1A612662d6590c2b5Bf73d247B&startblock=0&endblock=99999999&page=1&offset=10&sort=asc&apikey=E7EMPJVH625CRKUBMIDZ2UU6Q8ZUYPIHXY
 import dummyData from "../utils/dummyData";
 import { shortenAddress } from "../utils/shortenAddress";
-
 const TransactionsCard = ({ addressTo, addressFrom, timestamp, message, keyword, amount, url }) => {
     return (
         <div className="bg-[#181918] m-4 flex flex-1
@@ -17,10 +16,10 @@ const TransactionsCard = ({ addressTo, addressFrom, timestamp, message, keyword,
         ">
             <div className="flex flex-col items-center w-full mt-3">
                 <div className="w-full mb-6 p-2">
-                    <a href={`https://ropsten.etherscan.io/address/${addressFrom}`} target="_blank" rel="noreferrer">
+                    <a href={`https://sepolia.etherscan.io/address/${addressFrom}`} target="_blank" rel="noreferrer">
                         <p className="text-white text-base">From: {shortenAddress(addressFrom)}</p>
                     </a>
-                    <a href={`https://ropsten.etherscan.io/address/${addressTo}`} target="_blank" rel="noreferrer">
+                    <a href={`https://sepolia.etherscan.io/address/${addressTo}`} target="_blank" rel="noreferrer">
                         <p className="text-white text-base">To: {shortenAddress(addressTo)}</p>
                     </a>
                     <a>
@@ -42,8 +41,10 @@ const TransactionsCard = ({ addressTo, addressFrom, timestamp, message, keyword,
 
 const Transactions = () => {
     const { currentAccount, transactions } = useContext(TransactionContext);
+    console.log("acc", currentAccount);
+    console.log("tran", transactions);
     return (
-        <div className="flex w-full justify-center items-center 2xl:px-20 gradient-bg-transactions">
+        <div className="flex w-full justify-center items-center 2xl:px-20 ">
             <div className="flex flex-col md:p-12 py-12 px-4">
                 {currentAccount ? (
                     <h3 className="text-white text-3xl text-center my-2">
