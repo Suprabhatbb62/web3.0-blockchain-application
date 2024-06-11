@@ -1,7 +1,8 @@
+require("dotenv").config();
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-
+const URI = process.env.VITE_APP_URI_API;
 function Contact() {
 
     const [data, setdata] = useState({
@@ -23,7 +24,7 @@ function Contact() {
     const submitmessage = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`http://localhost:8000/api/form/contact`, {
+            const response = await fetch(`${URI}/api/form/contact`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
