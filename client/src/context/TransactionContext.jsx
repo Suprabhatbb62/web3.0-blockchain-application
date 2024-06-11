@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
 
 import { contractABI, contractAddress } from "../utils/constants";
+import {toast} from "react-toastify";
 
 export const TransactionContext = React.createContext();
 
@@ -122,6 +123,7 @@ export const TransactionProvider = ({ children }) => {
                     value: parsedAmount._hex, //0.00001
                 }]
             });
+            toast.success("Transaction sent");
 
             const transactionHash = await transactionContract.addToBlockchain(addressTo, parsedAmount, message, keyword);
 

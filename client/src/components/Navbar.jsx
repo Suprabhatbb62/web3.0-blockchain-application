@@ -11,13 +11,14 @@ const Navbar = () => {
     <div className="gradient-bg-navbar">
     <nav className="w-full flex md:justify-center justify-between items-center p-4">
       <div className="md:flex-[0.5] flex-initial justify-center items-center">
-        <img src={logo} alt="logo" className="w-32 cursor-pointer" />
+      <NavLink to="/" className="text-white text-base text-center mx-2 cursor-pointer"><img src={logo} alt="logo" className="w-32 cursor-pointer" ></img></NavLink>
       </div>
       <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
         <div className="flex flex-1 justify-evenly items-center flex-wrap sm:mt-0 mt-5 w-full">
           <NavLink to="/" className="text-white text-base text-center mx-2 cursor-pointer">Home</NavLink>
           <NavLink to="/market" className="text-white text-base text-center mx-2 cursor-pointer">Market</NavLink>
           <NavLink to="/tuitorial" className="text-white text-base text-center mx-2 cursor-pointer">Tuitorial</NavLink>
+          <NavLink to="https://finance-123com.blogspot.com/" target="_blank" className="text-white text-base text-center mx-2 cursor-pointer">Blog</NavLink>
           <NavLink to="/about" className="text-white text-base text-center mx-2 cursor-pointer">About</NavLink>
           <NavLink to="/contact" className="text-white text-base text-center mx-2 cursor-pointer">Contact</NavLink>
           <Outlet />

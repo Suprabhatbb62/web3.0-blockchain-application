@@ -11,6 +11,7 @@ const Footer = () => (
             <div className="flex flex-1 justify-evenly items-center flex-wrap sm:mt-0 mt-5 w-full">
                 <NavLink to="/market" className="text-white text-base text-center mx-2 cursor-pointer">Market</NavLink>
                 <NavLink to="/tuitorial" className="text-white text-base text-center mx-2 cursor-pointer">Tuitorial</NavLink>
+                <NavLink to="https://finance-123com.blogspot.com/" target="_blank" className="text-white text-base text-center mx-2 cursor-pointer">Blog</NavLink>
                 <NavLink to="/about" className="text-white text-base text-center mx-2 cursor-pointer">About</NavLink>
                 <NavLink to="/contact" className="text-white text-base text-center mx-2 cursor-pointer">Contact</NavLink>
             </div>

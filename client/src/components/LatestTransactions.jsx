@@ -8,15 +8,17 @@ function LatestTransactions() {
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
-            const res = await fetch(`https://api-sepolia.etherscan.io/api?module=account&action=txlist&address=0xe648e6238d8f0F1A612662d6590c2b5Bf73d247B&startblock=0&endblock=99999999&page=1&offset=10&sort=asc&apikey=E7EMPJVH625CRKUBMIDZ2UU6Q8ZUYPIHXY`);
+            const res = await fetch(`https://api-sepolia.etherscan.io/api?module=account&action=txlist&address=0xe648e6238d8f0F1A612662d6590c2b5Bf73d247B&startblock=0&endblock=99999999&page=1&offset=10000&sort=asc&apikey=E7EMPJVH625CRKUBMIDZ2UU6Q8ZUYPIHXY`);
             const resdata = await res.json();
-            console.log(resdata.result);
+            console.log("data", resdata.result);
             setData(resdata.result);
             setLoading(false);
         };
 
         fetchData();
     }, []);
+    console.log(data);
+
     return (
         <>
             <div className="flex w-full justify-center items-center 2xl:px-20 ">
