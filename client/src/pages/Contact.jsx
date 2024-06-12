@@ -22,11 +22,7 @@ function Contact() {
     const submitmessage = async (e) => {
         e.preventDefault();
         try {
-<<<<<<< HEAD
             const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/form/contact`, {
-=======
-            const response = await fetch(`dfapi/form/contact`, {
->>>>>>> 90ee4643ae69ee36730e2dc3bda7202b23e40f1a
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
