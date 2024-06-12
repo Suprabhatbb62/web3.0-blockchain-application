@@ -22,11 +22,7 @@ function Contact() {
     const submitmessage = async (e) => {
         e.preventDefault();
         try {
-<<<<<<< HEAD
             const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/form/contact`, {
-=======
-            const response = await fetch(`dfapi/form/contact`, {
->>>>>>> 90ee4643ae69ee36730e2dc3bda7202b23e40f1a
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -58,7 +54,7 @@ function Contact() {
                         type="submit"
                         className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] hover:bg-[#3d4f7c] rounded-full cursor-pointer"
                     >
-                        Submit
+                        Send
                     </button>
                 </form>
             </div>
