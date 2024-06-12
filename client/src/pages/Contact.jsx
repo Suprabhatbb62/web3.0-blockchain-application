@@ -22,7 +22,7 @@ function Contact() {
     const submitmessage = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`https://web3-0-blockchain-application-backend.onrender.com/api/form/contact`, {
+            const response = await fetch(`dfapi/form/contact`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
